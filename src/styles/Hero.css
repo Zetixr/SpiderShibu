@@ -1,0 +1,223 @@
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-height: 100vh;
+    padding: 140px 80px 40px 80px;
+    box-sizing: border-box;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+/* --- СТИЛИ ТЕКСТА И КОНТЕНТА --- */
+.hero-content {
+    position: relative;
+    /* Чтобы фоновый круг позиционировался относительно текста */
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 64px;
+    /* Сделали крупнее и массивнее */
+    font-weight: 900;
+    /* Максимальная толщина как в Figma */
+    line-height: 1.05;
+    letter-spacing: -1px;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.hero-title .white-text {
+    color: #fff;
+}
+
+.hero-title .red-text {
+    color: #FF2B57;
+}
+
+.hero-subtitle {
+    color: #FF2B57;
+    /* Подкрасили в цвет акцента */
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.hero-description {
+    color: #AEB4C2;
+    /* Сделали более мягким, не чисто белым */
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 480px;
+    margin-bottom: 36px;
+}
+
+/* --- ПОЗИЦИОНИРОВАНИЕ MID-CIRCLE ЗА ТЕКСТОМ --- */
+.mid-circle {
+    position: absolute;
+    width: 140%;
+    /* Делаем круг достаточно большим для красивого свечения */
+    max-width: 700px;
+    height: auto;
+    top: 400px;
+    left: 50px;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    /* Строго ПОЗАДИ текста */
+    pointer-events: none;
+    opacity: 0.8;
+    /* Подбирай прозрачность под макет */
+}
+
+#second-mid-circle {
+    position: absolute;
+    bottom: 300px;
+    left: -300px;
+    width: 140%;
+    /* Делаем круг достаточно большим для красивого свечения */
+    max-width: 700px;
+    height: auto;
+}
+
+/* --- КНОПКИ И КОНТРАКТ --- */
+.hero-actions {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #3F4756;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #fff;
+}
+
+.hero-contract {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 12px 20px;
+    display: inline-block;
+}
+
+.contract-label {
+    display: block;
+    font-size: 11px;
+    color: #616875;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.contract-value {
+    font-family: monospace;
+    font-size: 14px;
+    color: #AEB4C2;
+}
+
+/* --- ПРАВАЯ ЧАСТЬ (ЛИСА И ДЕКОР) --- */
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.hero-background-visual {
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+    height: 550px; /* Фиксированная высота для центрирования круга */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.decor-element {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Новый большой фоновый круг строго за лисой */
+.big-circle {
+    width: 170%; /* Увеличили масштаб, чтобы выходил за края лисы */
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Под лисой *//* Мягкое свечение */
+}
+
+.blue-star {
+    width: 35px;
+    top: 15%;
+    right: 10%;
+    z-index: 3;
+}
+
+.orange-star {
+    width: 35px;
+    bottom: 20%;
+    left: 5%;
+    z-index: 3;
+}
+
+.gray-star {
+    width: 25px;
+    top: 40%;
+    left: 15%;
+    opacity: 0.5;
+    z-index: 3;
+}
+
+.star-blur {
+    width: 100px;
+    bottom: 15%;
+    right: 0%;
+    opacity: 0.7;
+    z-index: 3;
+}
+
+.character-wrapper {
+    position: relative;
+    z-index: 2; /* Лиса поверх большого круга, но под звездами */
+}
+
+.main-character {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+/* --- ПОЛОСА WARNING ВНИЗУ HERO --- */
+.warning-ticker-container {
+    grid-column: 1 / -1;
+    width: calc(100% + 160px);
+    margin-left: -80px;
+    margin-top: 60px;
+    margin-bottom: -40px;
+    height: 24px; /* Управляем толщиной здесь */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.warning-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Или contain в зависимости от формата картинки */
+    display: block;
+}           

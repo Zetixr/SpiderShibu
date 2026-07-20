@@ -1,0 +1,67 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: transparent; /* Оставляем прозрачным, так как у Hero общий темный фон */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+}
+
+.navbar-logo img {
+  height: 32px;
+  width: auto;
+}
+
+.navbar-logo .accent-text {
+  color: #FF2B57; /* Красный акцент из макета */
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  color: #AEB4C2; /* Нейтральный цвет ссылок */
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #fff;
+}
+
+.btn-join {
+  background: #FF2B57;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-join:hover {
+  background: #e02046;
+}

@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #04143A; /* Запасной фоновый цвет */
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.app-container {
+  min-height: 100vh;
+  position: relative;
+  /* Линейный градиент из панели Colors в Figma сверху вниз */
+  background: linear-gradient(180deg, #162758 0%, #04143A 100%); 
+}
